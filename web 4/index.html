@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trazo y Cargo | Transporte Nacional y Local</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    .hero-bg { 
+      background: linear-gradient(rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.88)), 
+                  url('plaza-de-sol.jpeg') center/cover no-repeat fixed; 
+    }
+    .nav-link { transition: all 0.3s ease; }
+    .nav-link:hover { color: #f97316; transform: translateY(-1px); }
+    .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 50px -12px rgb(249 115 22 / 0.25); }
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- NAV -->
+  <nav class="bg-slate-950 text-white sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <img src="Logo-solo.jpeg" alt="Trazo y Cargo" class="h-12 w-auto">
+      </div>
+
+      <div class="hidden md:flex gap-8 text-lg">
+        <a href="#inicio" class="nav-link">Inicio</a>   
+        <a href="#tarifas" class="nav-link">Tarifas</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </div>
+
+      <!-- DOS BOTONES DE TELÉFONO -->
+      <div class="hidden md:flex items-center gap-3">
+        <a href="tel:+34672063090" class="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-7 py-3 rounded-2xl font-semibold">
+          <i class="fa-solid fa-phone"></i> +34 672 063 090
+        </a>
+        <a href="tel:+34602696820" class="flex items-center gap-2 bg-orange-500 hover:bg-orange-600 px-7 py-3 rounded-2xl font-semibold">
+          <i class="fa-solid fa-phone"></i> +34 602 696 820
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="md:hidden text-3xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900 px-6 py-6 text-lg">
+      <a href="#inicio" class="block py-3">Inicio</a>   
+      <a href="#tarifas" class="nav-link">Tarifas</a>
+      <a href="#contacto" class="block py-3">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="inicio" class="hero-bg h-screen flex items-center text-white">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+
+      <h1 class="text-6xl md:text-7xl font-bold leading-tight mb-4">
+        Trazo <span class="text-orange-400">y</span> Cargo
+      </h1>
+
+      <h2 class="text-4xl md:text-5xl font-semibold text-slate-200 mb-10">
+        Conectamos destinos y entregamos confianza
+      </h2>
+
+      <p class="text-2xl md:text-3xl text-slate-200 mb-10">• Reparto local en Madrid • Toda España •</p>
+
+      <a href="#tarifas" class="inline-flex items-center gap-3 bg-white text-slate-900 hover:bg-orange-500 hover:text-white text-2xl font-semibold px-12 py-6 rounded-3xl shadow-2xl transition">
+        <i class="fa-solid fa-calculator"></i>
+        Calcula tu presupuesto
+      </a>
+    </div>
+  </section>
+
+  <!-- TARIFAS -->
+  <section id="tarifas" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-semibold text-center mb-3">Tarifas Transparentes</h2>
+      <p class="text-center text-slate-600 mb-12">Precio real por kilómetro + peso/volumen. Sin sorpresas.</p>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="card-hover bg-slate-50 rounded-3xl p-10">
+          <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3"><i class="fa-solid fa-road text-orange-500"></i> Por Kilómetro</h3>
+          <div class="space-y-6">
+            <div class="flex justify-between items-center border-b pb-4">
+              <div class="text-lg">0 - 30 km</div>
+              <div class="text-3xl font-semibold text-orange-500">1,30 €/km</div>
+            </div>
+            <div class="flex justify-between items-center border-b pb-4">
+              <div class="text-lg">31 - 60 km</div>
+              <div class="text-3xl font-semibold text-orange-500">1,25 €/km</div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="text-lg">61 km en adelante</div>
+              <div class="text-3xl font-semibold text-orange-500">1,20 €/km</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-hover bg-slate-50 rounded-3xl p-10">
+          <h3 class="text-2xl font-semibold mb-6 flex items-center gap-3"><i class="fa-solid fa-weight-hanging text-orange-500"></i> Por Peso / Volumen</h3>
+          <div class="space-y-6">
+            <div class="flex justify-between items-center border-b pb-4">
+              <div class="text-lg">0 - 1.000 kg</div>
+              <div class="text-3xl font-semibold text-orange-500">0,07 €/kg</div>
+            </div>
+            <div class="flex justify-between items-center border-b pb-4">
+              <div class="text-lg">1.001 - 2.000 kg</div>
+              <div class="text-3xl font-semibold text-orange-500">0,06 €/kg</div>
+            </div>
+            <div class="text-sm text-slate-500">
+              1 m³ de volumen = 200 kg equivalentes<br>
+              (Palets europeos, americanos o especiales)
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 max-w-2xl mx-auto bg-slate-950 text-white rounded-3xl p-10">
+        <h3 class="text-2xl font-semibold mb-6 text-center">Calcula tu precio aproximado</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div>
+            <label class="block text-sm mb-2">Distancia (km)</label>
+            <input id="km" type="number" value="0" class="w-full bg-slate-900 border border-slate-700 rounded-2xl px-6 py-4 text-2xl text-center">
+          </div>
+          <div>
+            <label class="block text-sm mb-2">Peso (kg)</label>
+            <input id="kg" type="number" value="0" class="w-full bg-slate-900 border border-slate-700 rounded-2xl px-6 py-4 text-2xl text-center">
+          </div>
+          <div>
+            <label class="block text-sm mb-2">Volumen (m³)</label>
+            <input id="m3" type="number" value="0" class="w-full bg-slate-900 border border-slate-700 rounded-2xl px-6 py-4 text-2xl text-center">
+          </div>
+        </div>
+        <button onclick="calcularPrecio()" class="mt-8 w-full bg-orange-500 hover:bg-orange-600 py-6 rounded-3xl text-xl font-semibold">CALCULAR PRECIO</button>
+        <p id="resultado" class="text-center mt-6 text-3xl font-semibold text-orange-400"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO y FOOTER -->
+  <section id="contacto" class="py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-semibold text-center mb-10">¿Listo para tu próximo envío?
+Contactanos. También atendemos vía whatsApp</h2>
+      <form id="contact-form" class="grid md:grid-cols-2 gap-6">
+      </form>
+      <div class="text-center mt-12 space-y-2">
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-slate-950 text-white py-12 text-center">
+    <img src="Logo-solo.jpeg" alt="Trazo y Cargo" class="mx-auto h-16 mb-6 opacity-90">
+    <p class="text-orange-400 text-xl">+34 602 696 820 • +34 672 063 090</p>
+    <p class="text-slate-400">info@trazoycargo.com</p>
+    <p class="mt-8 text-xs text-slate-500">© 2026 Trazo Cargo & Logistics SL • Todos los derechos reservados</p>
+  </footer>
+
+  <!-- WhatsApp flotante -->
+  <a href="https://wa.me/34602696820?text=Hola%20Trazo%20y%20Cargo%2C%20quiero%20un%20presupuesto" target="_blank"
+     class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 sm:w-16 sm:h-16 rounded-3xl flex items-center justify-center shadow-2xl text-3xl sm:text-4xl z-[9999] transition-all hover:scale-110">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      btn.innerHTML = menu.classList.contains('hidden') ? '<i class="fa-solid fa-bars"></i>' : '<i class="fa-solid fa-xmark"></i>';
+    });
+
+    function calcularPrecio() {
+      const km = parseFloat(document.getElementById('km').value) || 0;
+      let kg = parseFloat(document.getElementById('kg').value) || 0;
+      const m3 = parseFloat(document.getElementById('m3').value) || 0;
+      
+      // REGLA: solo se usa el valor más alto entre peso real y equivalente de volumen
+      const volumenKg = m3 * 200;
+      kg = Math.max(kg, volumenKg);
+
+      let precioKm = 0;
+      if (km <= 30) precioKm = km * 1.30;
+      else if (km <= 60) precioKm = (30 * 1.30) + ((km - 30) * 1.25);
+      else precioKm = (30 * 1.30) + (30 * 1.25) + ((km - 60) * 1.20);
+
+      let precioKg = 0;
+      if (kg <= 1000) precioKg = kg * 0.07;
+      else precioKg = (1000 * 0.07) + ((kg - 1000) * 0.06);
+
+      const total = precioKm + precioKg;
+      document.getElementById('resultado').innerHTML = `Precio aproximado: <span class="text-4xl">${total.toFixed(2)} €</span>`;
+    }
+  </script>
+</body>
+</html>
